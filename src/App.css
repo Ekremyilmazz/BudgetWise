@@ -1,0 +1,253 @@
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 20px;
+    background-color: aqua;
+}
+
+@media (min-width: 768px) {
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 200px;
+    }
+}
+
+.hero-title, .hero-description {
+    font-size: 1rem;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .hero-title, .hero-description {
+        font-size: 1.5rem;
+    }
+
+    .hero-content {
+        font-size: 2rem;
+    }
+}
+
+.hero-title {
+    margin-top: 20px;
+    font-weight: 200;
+}
+
+.hero-description {
+    margin-right: 40px;
+    font-weight: 200;
+}
+
+.transaction-form-container {
+    width: auto;
+    height: 497px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: aqua;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .form-header{
+        font-size: 2rem;
+    }
+}
+
+.transaction-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.transaction-form input, select, button {
+    padding: 5px;
+    height: 50px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.transaction-form button {
+    background-color: #fc092a;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.transaction-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px){
+    .transaction-header{
+        font-size: 2rem;
+    }
+    .transaction-list {
+        font-size: 1.5rem;
+    }
+}
+
+.transaction-list {
+    width: auto;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: aqua;
+    font-size: 1rem;
+}
+
+.transaction-list ul {
+    max-height: 350px;
+    overflow-y: auto;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.transaction-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #0f0e0e;
+    align-items: center;
+}
+
+.transaction-list li:last-child {
+    border-bottom: none;
+}
+
+.transaction-list button {
+    background-color: #fc092a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+    width: 50px;
+}
+
+.balance-overview {
+    width: auto;
+    height: 350px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: aqua;
+    text-align: center;
+}
+
+.balance-overview h2 {
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.balance-overview p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .balance-overview h2 {
+        font-size: 2rem;
+    }
+    .balance-overview p {
+        font-size: 1.5rem;
+    }
+}
+
+.piechart-container {
+    width: auto;
+    height: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: aqua;
+    font-size: 1rem;
+}
+
+.piechart-header {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    .piechart-header {
+        font-size: 2rem;
+    }
+    .piechart-container {
+        font-size: 1rem;
+    }
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+@media (min-width: 1024px) {
+    .main-container {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+.grid-box {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fdfdfd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    margin-top: 40px;
+}
