@@ -6,6 +6,7 @@ import BalanceOverview from "./components/BalanceOverview";
 import CustomPieChart from "./components/PieChart";
 import Footer from "./components/Footer";
 
+
 const categories = ["Food", "Salary", "Transport", "Entertainment", "Other"];
 
 function App() {

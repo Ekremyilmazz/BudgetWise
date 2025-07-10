@@ -13,6 +13,23 @@
 }
 
 .hero-section {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation-fill-mode: forwards;
+  animation-name: heroFadeInDown;
+  animation-duration: 1.2s;      /* Daha uzun süre */
+  animation-timing-function: ease;
+  animation-delay: 0.4s;
+}
+
+@keyframes heroFadeInDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-section {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -74,6 +91,23 @@
 }
 
 .form-header {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation-fill-mode: forwards;
+  animation-name: fadeInDown;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-delay: 0.1s;
+}
+
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-header {
     text-align: center;
     margin-bottom: 40px;
     font-weight: bold;
@@ -92,6 +126,27 @@
     gap: 30px;
 }
 
+.form-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation-fill-mode: forwards;
+    animation-name: fadeInUp;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+}
+
+.form-item:nth-child(1) { animation-delay: 0.2s; }
+.form-item:nth-child(2) { animation-delay: 0.4s; }
+.form-item:nth-child(3) { animation-delay: 0.6s; }
+.form-item:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .transaction-form input, select, button {
     padding: 5px;
     height: 50px;
@@ -101,6 +156,18 @@
     box-sizing: border-box;
 }
 
+.transaction-form input,
+.transaction-form select {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.transaction-form input:focus,
+.transaction-form select:focus {
+    outline: none;
+    box-shadow: 0 0 8px #fc092a;
+    transform: scale(1.03);
+}
+
 .transaction-form button {
     background-color: #fc092a;
     border-radius: 10px;
@@ -108,6 +175,16 @@
     margin-top: 10px;
     font-weight: bold;
     font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.transaction-form button:hover {
+    background-color: #e00623;
+    transform: scale(1.05);
+}
+
+.transaction-form button:active {
+  transform: scale(0.95);
 }
 
 .transaction-header {
@@ -125,6 +202,8 @@
         font-size: 1.5rem;
     }
 }
+
+/* Transaction List */
 
 .transaction-list {
     width: auto;
@@ -167,6 +246,49 @@
     width: 50px;
 }
 
+.transaction-list ul li {
+  opacity: 0;
+  transform: translateY(20px);
+  animation-fill-mode: forwards;
+  animation-name: fadeInUp;
+  animation-duration: 0.4s;
+  animation-timing-function: ease;
+}
+
+.transaction-list ul li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.transaction-list ul li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.transaction-list ul li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.transaction-list ul li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.transaction-list button {
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.transaction-list button:hover {
+  background-color: #e00623;
+  transform: scale(1.1);
+}
+.transaction-list button:active {
+  transform: scale(0.9);
+}
+
+/* Balance Overview*/
+
 .balance-overview {
     width: auto;
     height: 350px;
@@ -197,6 +319,35 @@
     }
 }
 
+.balance-overview {
+  opacity: 0;
+  transform: translateY(20px);
+  animation-fill-mode: forwards;
+  animation-name: fadeInUp;
+  animation-duration: 0.6s;
+  animation-timing-function: ease;
+  animation-delay: 0.2s;
+  cursor: default;
+  transition: box-shadow 0.3s ease;
+  border: 1px solid transparent; 
+  padding: 20px;
+  border-radius: 8px;
+  background-color: aqua;
+  text-align: center;
+}
+
+.balance-overview:hover {
+  box-shadow: 0 4px 12px rgba(252, 9, 42, 0.6);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pie Chart */
 .piechart-container {
     width: auto;
     height: 100%;
@@ -222,6 +373,26 @@
     }
 }
 
+.piechart-container {
+  opacity: 0;
+  transform: scale(0.8);
+  animation-fill-mode: forwards;
+  animation-name: fadeInScale;
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
+  animation-delay: 0.3s;
+  border-radius: 8px;
+  background-color: aqua;
+  padding: 20px;
+}
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .main-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -243,6 +414,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+/* Footer */
 .footer {
     background-color: #f1f1f1;
     padding: 20px;
@@ -250,4 +422,35 @@
     font-size: 14px;
     color: #333;
     margin-top: 40px;
+}
+
+.footer {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation-fill-mode: forwards;
+  animation-name: fadeInDown;
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
+  animation-delay: 0.4s;
+
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  margin-top: 40px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+
+.footer:hover {
+  color: #fc092a;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

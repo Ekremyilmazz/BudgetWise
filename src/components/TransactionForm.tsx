@@ -7,7 +7,7 @@ interface Props {
   categories: string[];
 }
 
-const TransactionForm: React.FC<Props> = ({ categories}) => {
+const TransactionForm: React.FC<Props> = ({ categories }) => {
   const dispatch = useAppDispatch();
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState<string>("");
@@ -36,24 +36,35 @@ const TransactionForm: React.FC<Props> = ({ categories}) => {
     <div className="transaction-form-container">
       <h2 className="form-header">Add New Transaction</h2>
       <form onSubmit={handleSubmit} className="transaction-form">
-        <input
-          type="text"
-          placeholder="Transaction Description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-        <input
-          type="number"
-          placeholder="Amount"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-        />
-        <select value={category} onChange={(e) => setCategory(e.target.value)}>
-          {categories.map((cat) => (
-            <option key={cat}>{cat}</option>
-          ))}
-        </select>
-        <button type="submit">Add Transaction</button>
+        <div className="form-item">
+          <input
+            type="text"
+            placeholder="Transaction Description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+        </div>
+        <div className="form-item">
+          <input
+            type="number"
+            placeholder="Amount"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+          />
+        </div>
+        <div className="form-item">
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            {categories.map((cat) => (
+              <option key={cat}>{cat}</option>
+            ))}
+          </select>
+        </div>
+        <div className="form-item">
+          <button type="submit">Add Transaction</button>
+        </div>
       </form>
     </div>
   );
