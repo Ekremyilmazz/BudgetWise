@@ -25,7 +25,7 @@ This project was built using the following technologies:
 ## 4. Project Architecture:
 <img width="565" height="455" alt="Image" src="https://github.com/user-attachments/assets/41fc4e36-697e-4a1f-a5fb-8eef586781e9" />
 
-## 4. Why Redux Toolkit?
+## 5. Why Redux Toolkit?
 Redux Toolkit was chosen for this project to:
 - Avoid boilerplate code using 
 - createSlice and configureStore 
@@ -33,7 +33,7 @@ Redux Toolkit was chosen for this project to:
 - Enable better debugging with Redux DevTools 
 - Demonstrate real-world usage of global state management 
 
-## 5. Installation and Local Setup
+## 6. Installation and Local Setup
 
 1. Clone the repository
 
@@ -49,12 +49,12 @@ Redux Toolkit was chosen for this project to:
    ```bash
    npm run dev
 
-## 6. Deployment
+## 7. Deployment
 The project is deployed on Vercel. Since the app relies on Redux Toolkit and 
 localStorage to manage and persist state, a backend or database is not required at this stage.
 
 You can view the live demo here: [https://budget-wise-tau.vercel.app/]
 
-## 7. Future Improvements
+## 8. Future Improvements
 Future iterations of the project could integrate a backend like Firebase or a Node.js backend for user authentication and data storage, removing the reliance on 
 localStorage for data persistence.
