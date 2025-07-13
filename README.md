@@ -1,5 +1,5 @@
 # BudgetWise – A Personal Budget Tracker App
-Manage Your Income and Expenses with Redux Toolkit
+Manage Your Income and Expenses with BudgetWise
 
 ## 1. Project Objective
 The goal of this project was to build a realistic personal finance tracking application where users can manage their income and expenses. It was designed to demonstrate core and intermediate concepts of Redux Toolkit, such as slices, reducers, middleware, and async actions, in a real-world scenario.
