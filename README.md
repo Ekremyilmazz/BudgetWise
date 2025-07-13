@@ -6,12 +6,12 @@ The goal of this project was to build a realistic personal finance tracking appl
 
 ## 2. Core Features
 The BudgetWise app includes the following core features:
-✅ Add income and expense entries 
-✅ Add and Delete transactions 
-✅ View total income, total expenses, and remaining balance 
-✅ Filter transactions by category or type 
-✅ All financial data is stored and managed via Redux Toolkit 
-✅ Optional charts to visualize spending trends over time 
+- ✅ Add income and expense entries 
+- ✅ Add and Delete transactions 
+- ✅ View total income, total expenses, and remaining balance 
+- ✅ Filter transactions by category or type 
+- ✅ All financial data is stored and managed via Redux Toolkit 
+- ✅ Optional charts to visualize spending trends over time 
 
 ## 3. Technologies Used
 This project was built using the following technologies:
@@ -22,7 +22,7 @@ CSS: Styling
 Chart.js or Recharts (optional): Data visualization 
 LocalStorage: For persisting data between sessions 
 
-##4. Why Redux Toolkit?
+## 4. Why Redux Toolkit?
 Redux Toolkit was chosen for this project to:
 Avoid boilerplate code using 
 createSlice and configureStore 
@@ -46,12 +46,12 @@ Demonstrate real-world usage of global state management
    ```bash
    npm run dev
 
-##6. Deployment
+## 6. Deployment
 The project is deployed on Vercel. Since the app relies on Redux Toolkit and 
 localStorage to manage and persist state, a backend or database is not required at this stage.
 
 You can view the live demo here: [https://budget-wise-tau.vercel.app/]
 
-##7. Future Improvements
+## 7. Future Improvements
 Future iterations of the project could integrate a backend like Firebase or a Node.js backend for user authentication and data storage, removing the reliance on 
 localStorage for data persistence.
