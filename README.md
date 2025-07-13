@@ -15,12 +15,12 @@ The BudgetWise app includes the following core features:
 
 ## 3. Technologies Used
 This project was built using the following technologies:
-React (with Vite): UI library 
-Redux Toolkit: State management 
-TypeScript (optional): Type safety 
-CSS: Styling 
-Chart.js or Recharts (optional): Data visualization 
-LocalStorage: For persisting data between sessions 
+- React (with Vite): UI library 
+- Redux Toolkit: State management 
+- TypeScript (optional): Type safety 
+- CSS: Styling 
+- Chart.js or Recharts (optional): Data visualization 
+- LocalStorage: For persisting data between sessions 
 
 ## 4. Why Redux Toolkit?
 Redux Toolkit was chosen for this project to:
