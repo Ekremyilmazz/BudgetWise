@@ -1,69 +1,57 @@
-# React + TypeScript + Vite
+# BudgetWise – A Personal Budget Tracker App
+Manage Your Income and Expenses with Redux Toolkit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1. Project Objective
+The goal of this project was to build a realistic personal finance tracking application where users can manage their income and expenses. It was designed to demonstrate core and intermediate concepts of Redux Toolkit, such as slices, reducers, middleware, and async actions, in a real-world scenario.
 
-Currently, two official plugins are available:
+## 2. Core Features
+The BudgetWise app includes the following core features:
+✅ Add income and expense entries 
+✅ Add and Delete transactions 
+✅ View total income, total expenses, and remaining balance 
+✅ Filter transactions by category or type 
+✅ All financial data is stored and managed via Redux Toolkit 
+✅ Optional charts to visualize spending trends over time 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 3. Technologies Used
+This project was built using the following technologies:
+React (with Vite): UI library 
+Redux Toolkit: State management 
+TypeScript (optional): Type safety 
+CSS: Styling 
+Chart.js or Recharts (optional): Data visualization 
+LocalStorage: For persisting data between sessions 
 
-## Expanding the ESLint configuration
+##4. Why Redux Toolkit?
+Redux Toolkit was chosen for this project to:
+Avoid boilerplate code using 
+createSlice and configureStore 
+Simplify state logic and action creation 
+Enable better debugging with Redux DevTools 
+Demonstrate real-world usage of global state management 
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 5. Installation and Local Setup
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. Clone the repository
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+   ```bash
+   https://github.com/Ekremyilmazz/BudgetWise.git
+2. Navigate to the project directory:
+   ```
+   cd Budgetwise
+3. Install dependencies:
+   ```
+   npm install
+4. Run the development server:
+   ```bash
+   npm run dev
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+##6. Deployment
+The project is deployed on Vercel. Since the app relies on Redux Toolkit and 
+localStorage to manage and persist state, a backend or database is not required at this stage.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+You can view the live demo here: [https://budget-wise-tau.vercel.app/]
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+##7. Future Improvements
+Future iterations of the project could integrate a backend like Firebase or a Node.js backend for user authentication and data storage, removing the reliance on 
+localStorage for data persistence.
