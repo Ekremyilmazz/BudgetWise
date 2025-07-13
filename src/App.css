@@ -123,7 +123,7 @@
 .transaction-form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
 }
 
 .form-item {
@@ -354,7 +354,7 @@
     padding: 20px;
     border-radius: 8px;
     background-color: aqua;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .piechart-header {
@@ -372,6 +372,7 @@
         font-size: 1rem;
     }
 }
+
 
 .piechart-container {
   opacity: 0;
